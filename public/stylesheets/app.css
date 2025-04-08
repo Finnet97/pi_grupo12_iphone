@@ -150,9 +150,8 @@ hr {
   border-bottom: solid 1px var(--gray);
 }
 
-
-
 /*====== Banner ======*/
+
 .banner {
   background-image: url(/images/img-home-banner.jpg);
   background-repeat: no-repeat;
@@ -161,8 +160,8 @@ hr {
   height: 100px;
 }
 
-
 /*====== Products ======*/
+
 .products-wrapper {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -258,6 +257,7 @@ hr {
 }
 
 /*====== Footer ======*/
+
 .main-footer {
   background-color: #ffffff;
   padding: 20px 0;
@@ -424,6 +424,12 @@ hr {
 }
 
 /*====== Formularios ======*/
+
+/* Para que los forms de registro se vean bien */
+.form-group {
+  margin-bottom: 15px;
+}
+
 .form-label {
   display: inline-block;
   font-size: 1.6em;

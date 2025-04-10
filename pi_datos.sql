@@ -28,7 +28,7 @@ CREATE TABLE productos (
     deletedAt TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     
     -- FK
-    CONSTRAINT fk_usuario FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
+    FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
 );
 
 CREATE TABLE comentarios (
@@ -42,8 +42,8 @@ CREATE TABLE comentarios (
     deletedAt TIMESTAMP NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     
     -- FK
-    CONSTRAINT fk_comentario_producto FOREIGN KEY (productoId) REFERENCES productos(id),
-    CONSTRAINT fk_comentario_usuario FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
+    FOREIGN KEY (productoId) REFERENCES productos(id),
+    FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
 );
 
 -- Insertar datos de usuarios

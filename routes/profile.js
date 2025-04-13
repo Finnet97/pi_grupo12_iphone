@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const profileCont = require('../controllers/profileCont');
+
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('profile');
-});
+router.get('/', profileCont.index);
 
 module.exports = router;

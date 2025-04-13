@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const registerCont = require('../controllers/registerCont');
+
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('register');
-});
+router.get('/', registerCont.index);
 
 module.exports = router;

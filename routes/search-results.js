@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const searchCont = require('../controllers/searchCont');
+
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('search-results');
-});
+router.get('/', searchCont.index);
 
 module.exports = router;

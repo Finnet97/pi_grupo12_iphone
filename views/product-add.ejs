@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg" />
+	<link width="" rel="shortcut icon" href="./images/logo-mercado-liebre.jpg"/>
 
-	<title> Mercado Liebre Argentina</title>
+	<title>Mercado Liebre Argentina</title>
 	<!-- Font Awesome Stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	<!-- Bootstrap Grid Stylesheet -->
@@ -16,24 +16,40 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include('partials/header') %>
+	<%- include('partials/headerLogueado') %>
 	<!-- /Header -->
 
-	<!-- Novedades -->
-	<div class="container products-wrapper">
+	<!-- Agregar producto -->
+    <div class="container products-wrapper">
 		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Agregar productos</h2>
-			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario para agregar prodcutos al catálogo. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos. <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
-			</h2>
+		  <div class="col-12">
+			<h2 class="products-title">Agregar Producto</h2>
+		  </div>
+		  <div class="col-12">
+			<form action="/product/add" method="GET" enctype="multipart/form-data">
+			  <!-- Campo imagen: tipo file -->
+			  <div class="form-group">
+				<label class="form-label" for="imagen">Imagen del producto:</label>
+				<input class="form-input" type="file" name="imagen" id="imagen" accept="image/*" required>
+			  </div>
+			  <!-- Campo nombre del producto: tipo texto -->
+			  <div class="form-group">
+				<label class="form-label" for="nombre">Nombre del producto:</label>
+				<input class="form-input" type="text" name="nombre" id="nombre" required>
+			  </div>
+			  <!-- Campo descripción: campo de texto -->
+			  <div class="form-group">
+				<label class="form-label" for="descripcion">Descripción:</label>
+				<textarea class="form-input" name="descripcion" id="descripcion" rows="4" required></textarea>
+			  </div>
+			  <!-- Botón de envío -->
+			  <div class="form-group">
+				<button type="submit" class="btn">Agregar Producto</button>
+			  </div>
+			</form>
+		  </div>
 		</div>
-	</div>
+	</div>  
 
 	<!-- footer -->
 	<%- include('partials/footer') %>

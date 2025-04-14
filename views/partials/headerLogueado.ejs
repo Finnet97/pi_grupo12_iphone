@@ -3,7 +3,7 @@
 		<div class="row align-items-center">
 			<div class="col-5 col-md-2">
 				<a href="/" class="main-header_home-link">
-					<img src="./images/logo-mercado-liebre.svg">
+					<img src="/images/logo-mercado-liebre.svg">
 				</a>
 			</div>
 
@@ -33,12 +33,13 @@
 			</ul>
 
 			<ul class="right-navbar">
-				<li><a href="/profile">
-						Nombre del usuario <i class="fas fa-user"></i>
+				<li>
+					<a href="/user/profile">
+						<%= usuario.usuario %><i class="fas fa-user"></i>
 					</a>
 				</li>
 				<li>
-					<form action="" method="post">
+					<form action="/" method="post">
 						<button class="logout" type="submit">
 							Cerrar sesión <i class="fas fa-sign-in-alt"></i>
 						</button>

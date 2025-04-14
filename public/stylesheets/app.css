@@ -1,5 +1,5 @@
 /*====== Fonts ======*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers:300,400,700&display=swap');
 
 
 /*====== Variables ======*/
@@ -10,7 +10,7 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: 'Roboto', sans-serif
+  --base-font-family: 'Bangers', sans-serif
 }
 
 
@@ -69,6 +69,7 @@ hr {
 .main-header {
   padding: 15px 0;
   background-color: var(--yellow);
+  color: #ffffff;
 }
 
 .main-header_home-link,
@@ -137,10 +138,12 @@ hr {
   border: 0px;
   cursor: pointer;
   font-size: 1em;
+  font-family: var(--base-font-family);
+  color: #ffffff;
 }
 
 .logout:hover{
-  color: #1259c3;
+  color: #28a745;
 }
 
 .left-navbar a,
@@ -259,7 +262,7 @@ hr {
 /*====== Footer ======*/
 
 .main-footer {
-  background-color: #ffffff;
+  background-color: #171616;
   padding: 20px 0;
   margin-top: 80px;
 }
@@ -269,12 +272,12 @@ hr {
 }
 
 .footer-data i {
-  color: var(--light-blue);
+  color: #28a745;
   font-size: 3.5em;
 }
 
 .footer-data h2 {
-  color: var(--gray);
+  color: #ffffff;
   font-size: 2.4em;
   font-weight: 400;
 }
@@ -450,7 +453,7 @@ hr {
 
 .error{
   color: rgb(209, 0, 0);
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 textarea.form-input {
@@ -476,7 +479,7 @@ textarea.form-input {
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: #28a745 ;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;

@@ -27,7 +27,7 @@ body {
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   background-color: var(--light-gray);
 }
@@ -43,6 +43,7 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  font-family: "Poppins", sans-serif;
 }
 
 figure {
@@ -214,6 +215,7 @@ hr {
 }
 
 .product-box_data p {
+  font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   width: 100%;
   color: var(--gray);
@@ -284,6 +286,7 @@ hr {
 
 .footer-data p {
   color: var(--gray);
+  font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -325,6 +328,7 @@ hr {
 }
 
 .product-detail-description {
+  font-family: "Poppins", sans-serif;
   padding: 15px 15px 15px 40px;
   font-size: 1.8em;
   line-height: 1.5;

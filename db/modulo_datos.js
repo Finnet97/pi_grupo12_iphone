@@ -9,101 +9,66 @@ const data = {
   },
   productos: [
     {
-      nombre: "Cafetera Moulinex",
-      imagen: "/images/products/img-cafetera-moulinex.jpg",
-      descripcion: "Cafetera de acero inoxidable Moulinex.",
-      comentarios: [
-        {
-          usuario: "comentador1",
-          texto: "Muy buena cafetera, la recomiendo.",
-          fotoPerfil: "/images/users/default-image.png"
-        },
-        {
-          usuario: "comentador2",
-          texto: "Funciona perfecto, llegó en tiempo.",
-          fotoPerfil: "/images/users/default-image.png"
-        }
-      ]
-    },
-    {
-      nombre: "Home Banner",
-      imagen: "/images/products/img-home-banner.jpg",
-      descripcion: "Imagen decorativa para banners del sitio.",
-      comentarios: [
-        {
-          usuario: "comentador3",
-          texto: "Quedó muy bien en mi diseño web.",
-          fotoPerfil: "/images/users/default-image.png"
-        }
-      ]
-    },
-    {
-      nombre: "MacBook Pro 2019",
-      imagen: "/images/products/img-macbook-pro-2019.jpg",
-      descripcion: "Apple MacBook Pro edición 2019.",
-      comentarios: [
-        {
-          usuario: "comentador4",
-          texto: "Excelente rendimiento para edición de video.",
-          fotoPerfil: "/images/users/default-image.png"
-        }
-      ]
-    },
-    {
-      nombre: "Samsung Galaxy S10",
-      imagen: "/images/products/img-samsung-galaxy-s10.jpg",
-      descripcion: "Smartphone Samsung Galaxy S10 color negro.",
-      comentarios: [
-        {
-          usuario: "comentador5",
-          texto: "Muy buena cámara y duración de batería.",
-          fotoPerfil: "/images/users/default-image.png"
-        }
-      ]
-    },
-    {
-      nombre: "Smart TV Samsung",
-      imagen: "/images/products/img-tv-samsung-smart.jpg",
-      descripcion: "Televisor Smart TV Samsung 55 pulgadas.",
-      comentarios: [
-        {
-          usuario: "comentador6",
-          texto: "Excelente calidad de imagen.",
-          fotoPerfil: "/images/users/default-image.png"
-        }
-      ]
-    },
-    {
-      nombre: "Producto 6",
-      imagen: "/images/products/default-image.png",
-      descripcion: "Descripción de producto 6.",
+      nombre: "Rolex Submariner",
+      imagen: "/images/products/img-rolex-submariner.jpg",
+      descripcion: "Reloj de buceo icónico con caja de acero inoxidable y bisel giratorio unidireccional.",
       comentarios: []
     },
     {
-      nombre: "Producto 7",
-      imagen: "/images/products/default-image.png",
-      descripcion: "Descripción de producto 7.",
+      nombre: "Omega Speedmaster",
+      imagen: "/images/products/speedmaster.png",
+      descripcion: "Cronógrafo legendario conocido como el 'Moonwatch', usado en misiones espaciales.",
       comentarios: []
     },
     {
-      nombre: "Producto 8",
-      imagen: "/images/products/default-image.png",
-      descripcion: "Descripción de producto 8.",
+      nombre: "Tag Heuer Carrera",
+      imagen: "/images/products/img-tag-heuer-carrera.jpg",
+      descripcion: "Diseño deportivo inspirado en las carreras, con cronógrafo y cristal de zafiro.",
       comentarios: []
     },
     {
-      nombre: "Producto 9",
-      imagen: "/images/products/default-image.png",
-      descripcion: "Descripción de producto 9.",
+      nombre: "Seiko Prospex",
+      imagen: "/images/products/img-seiko-prospex.jpg",
+      descripcion: "Reloj japonés automático resistente al agua, ideal para aventuras extremas.",
       comentarios: []
     },
     {
-      nombre: "Producto 10",
-      imagen: "/images/products/default-image.png",
-      descripcion: "Descripción de producto 10.",
+      nombre: "Casio G-Shock",
+      imagen: "/images/products/img-casio-gshock.jpg",
+      descripcion: "Reloj digital ultrarresistente con funciones múltiples y estilo urbano.",
+      comentarios: []
+    },
+    {
+      nombre: "Tissot PRX",
+      imagen: "/images/products/img-tissot-prx.jpg",
+      descripcion: "Diseño retro con movimiento suizo y brazalete integrado.",
+      comentarios: []
+    },
+    {
+      nombre: "Citizen Eco-Drive",
+      imagen: "/images/products/img-citizen-ecodrive.jpg",
+      descripcion: "Reloj solar que no necesita cambio de batería, con estilo clásico.",
+      comentarios: []
+    },
+    {
+      nombre: "Breitling Navitimer",
+      imagen: "/images/products/img-breitling-navitimer.jpg",
+      descripcion: "Reloj para pilotos con regla de cálculo y diseño robusto.",
+      comentarios: []
+    },
+    {
+      nombre: "Hamilton Khaki Field",
+      imagen: "/images/products/img-hamilton-khaki.jpg",
+      descripcion: "Estética militar con precisión suiza, ideal para uso casual.",
+      comentarios: []
+    },
+    {
+      nombre: "Daniel Wellington Classic",
+      imagen: "/images/products/img-dw-classic.jpg",
+      descripcion: "Minimalista y elegante, perfecto para ocasiones formales.",
       comentarios: []
     }
-  ]
+  ]  
 };
 
 module.exports = data;

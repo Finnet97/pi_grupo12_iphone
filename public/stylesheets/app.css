@@ -4,7 +4,7 @@
 
 /*====== Variables ======*/
 :root {
-  --yellow: #EAC926;
+  --yellow: #f6edd9;
   --dark-blue: #03264C;
   --light-blue: #1259c3;
   --gray: #666666;
@@ -70,7 +70,7 @@ hr {
 .main-header {
   padding: 15px 0;
   background-color: var(--yellow);
-  color: #ffffff;
+  color: black;
 }
 
 .main-header_home-link,
@@ -271,7 +271,7 @@ hr {
 /*====== Footer ======*/
 
 .main-footer {
-  background-color: #171616;
+  background-color: #f6edd9;
   padding: 20px 0;
   margin-top: 80px;
 }
@@ -281,12 +281,12 @@ hr {
 }
 
 .footer-data i {
-  color: #28a745;
+  color: #1788ea;
   font-size: 3.5em;
 }
 
 .footer-data h2 {
-  color: #ffffff;
+  color: black;
   font-size: 2.4em;
   font-weight: 400;
 }

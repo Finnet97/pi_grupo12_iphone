@@ -12,5 +12,19 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "Repo para el tp integrador de progra II",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Finnet97/pi_grupo12_iphone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Finnet97/pi_grupo12_iphone/issues"
+  },
+  "homepage": "https://github.com/Finnet97/pi_grupo12_iphone#readme"
 }

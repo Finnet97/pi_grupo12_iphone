@@ -9,6 +9,7 @@ const data = {
   },
   productos: [
     {
+      id: 1,
       nombre: "Rolex Submariner",
       imagen: "/images/products/img-rolex-submariner.jpg",
       descripcion: "Reloj de buceo icónico con caja de acero inoxidable y bisel giratorio unidireccional.",
@@ -31,6 +32,7 @@ const data = {
       ]
     },
     {
+      id: 2,
       nombre: "Omega Speedmaster",
       imagen: "/images/products/speedmaster.png",
       descripcion: "Cronógrafo legendario conocido como el 'Moonwatch', usado en misiones espaciales.",
@@ -53,6 +55,7 @@ const data = {
       ]
     },
     {
+      id: 3,
       nombre: "Tag Heuer Carrera",
       imagen: "/images/products/img-tag-heuer-carrera.jpg",
       descripcion: "Diseño deportivo inspirado en las carreras, con cronógrafo y cristal de zafiro.",
@@ -70,6 +73,7 @@ const data = {
       ]
     },
     {
+      id: 4,
       nombre: "Seiko Prospex",
       imagen: "/images/products/img-seiko-prospex.jpg",
       descripcion: "Reloj japonés automático resistente al agua, ideal para aventuras extremas.",
@@ -92,6 +96,7 @@ const data = {
       ]
     },
     {
+      id: 5,
       nombre: "Casio G-Shock",
       imagen: "/images/products/img-casio-gshock.jpg",
       descripcion: "Reloj digital ultrarresistente con funciones múltiples y estilo urbano.",
@@ -109,6 +114,7 @@ const data = {
       ]
     },
     {
+      id: 6,
       nombre: "Tissot PRX",
       imagen: "/images/products/img-tissot-prx.jpg",
       descripcion: "Diseño retro con movimiento suizo y brazalete integrado.",
@@ -131,6 +137,7 @@ const data = {
       ]
     },
     {
+      id: 7,
       nombre: "Citizen Eco-Drive",
       imagen: "/images/products/img-citizen-ecodrive.jpg",
       descripcion: "Reloj solar que no necesita cambio de batería, con estilo clásico.",
@@ -148,6 +155,7 @@ const data = {
       ]
     },
     {
+      id: 8,
       nombre: "Breitling Navitimer",
       imagen: "/images/products/img-breitling-navitimer.jpg",
       descripcion: "Reloj para pilotos con regla de cálculo y diseño robusto.",
@@ -170,6 +178,7 @@ const data = {
       ]
     },
     {
+      id: 9,
       nombre: "Hamilton Khaki Field",
       imagen: "/images/products/img-hamilton-khaki.jpg",
       descripcion: "Estética militar con precisión suiza, ideal para uso casual.",
@@ -192,6 +201,7 @@ const data = {
       ]
     },
     {
+      id: 10,
       nombre: "Daniel Wellington Classic",
       imagen: "/images/products/img-dw-classic.jpg",
       descripcion: "Minimalista y elegante, perfecto para ocasiones formales.",

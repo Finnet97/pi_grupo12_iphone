@@ -10,7 +10,6 @@ const userCont = {
     profile: function(req, res) {
         res.render('profile', { usuario: data.usuario });
     },
-    
     createLogin: function (req,res) {
         let userInfo = {
             email: req.body.email,
@@ -28,8 +27,6 @@ const userCont = {
     
     
 }
-
-
 
 
 module.exports = userCont;

@@ -1,5 +1,5 @@
-CREATE SCHEMA miralo_watch;
-USE miralo_watch;
+CREATE SCHEMA mercado_liebre;
+USE mercado_liebre;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,

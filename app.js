@@ -4,11 +4,31 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Rutas
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var productRouter = require('./routes/product');
 
 var app = express();
+
+// Conexión a base de datos
+const db = require('./models');
+db.sequelize.authenticate()
+  .then(() => {
+    console.log('✔ Conexión a la base de datos exitosa');
+  })
+  .catch(err => {
+    console.error('✖ Error al conectar con la base de datos:', err);
+  });
+
+// Sincronización (solo en desarrollo)
+db.sequelize.sync({ alter: true })
+  .then(() => {
+    console.log('✔ Modelos sincronizados con la base de datos');
+  })
+  .catch(err => {
+    console.error('✖ Error al sincronizar modelos:', err);
+  });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,11 +51,8 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
   res.status(err.status || 500);
   res.render('error');
 });

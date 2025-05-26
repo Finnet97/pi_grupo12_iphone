@@ -6,5 +6,6 @@ const userCont = require('../controllers/userCont');
 router.get('/login', userCont.login);
 router.get('/register', userCont.register);
 router.get('/profile', userCont.profile);
+router.get('/profile/:id', userCont.profile);
 
 module.exports = router;

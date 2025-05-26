@@ -7,9 +7,20 @@ const userCont = {
     register: function(req, res) {
         res.render('register');
     },
-    profile: function(req, res) {
-        res.render('profile', { usuario: data.usuario });
-    },
+    profile: async function (req, res) {
+        try {
+            const usuario = await db.Usuario.findByPk(req.params.id, {
+                include: { model: db.Producto, as: 'productos' }
+            });
+    
+            if (!usuario) return res.status(404).send('Usuario no encontrado');
+    
+            res.render('profile', { usuario });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno');
+        }
+    },    
     createLogin: function (req,res) {
         let userInfo = {
             email: req.body.email,

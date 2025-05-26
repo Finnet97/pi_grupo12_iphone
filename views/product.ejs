@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="/stylesheets/app.css" />
 </head>
 <body>
-
   <!-- Header -->
   <%- include('partials/header') %>
+  <!-- Header -->
 
   <!-- Detalle del producto -->
   <div class="container products-wrapper">
@@ -23,7 +23,7 @@
       <div class="col-12 col-lg-8">
         <section class="product-box">
           <figure class="product-box_image">
-            <img src="<%= product.imagen %>" alt="<%= producto.nombre %>" class="product-detail-img" />
+            <img src="/images/products/<%= product.imagen %>" alt="<%= product.nombre %>" class="product-detail-img" />
           </figure>
           <article class="product-box_data">
             <p><%= product.descripcion %></p>
@@ -36,11 +36,11 @@
         <section class="comments">
           <% for (let i = 0; i < product.comentarios.length; i++) { %>
             <article class="comment">
-              <img src="<%= product.comentarios[i].foto %>" alt="avatar" width="35" height="35">
+              <img src="/images/users/def_user.jpg" alt="avatar" width="35" height="35">
               <div class="data">
                 <p class="user">
-                  <strong><%= product.comentarios[i].usuario %>:</strong>
-                  <%= producto.comentarios[i].texto %>
+                  <strong>Usuario <%= product.comentarios[i].usuarioId %>:</strong>
+                  <%= product.comentarios[i].texto %>
                 </p>
               </div>
             </article>
@@ -58,6 +58,6 @@
 
   <!-- Footer -->
   <%- include('partials/footer') %>
-
+  <!-- Footer -->
 </body>
 </html>

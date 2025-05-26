@@ -1,5 +1,5 @@
-CREATE SCHEMA mercado_liebre;
-USE mercado_liebre;
+CREATE SCHEMA miralo_watch;
+USE miralo_watch;
 
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -63,113 +63,71 @@ INSERT INTO usuarios (email, password, fechaNacimiento, dni, fotoPerfil)
 VALUES ('ana.martinez@mail.com', 'anaMartinez', '1988-09-08', 56789012, 'ana.png');
 
 -- Insertar publicaciones de productos
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion) 
-VALUES (1, 'producto1.jpg', 'Camisa Casual', 'Camisa casual de algodón, ideal para el verano.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (2, 'producto2.jpg', 'Zapatos Deportivos', 'Zapatos deportivos para correr y actividades al aire libre.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (3, 'producto3.jpg', 'Reloj Moderno', 'Reloj de pulsera con diseño moderno y elegante.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (4, 'producto4.jpg', 'Bolso de Mano', 'Bolso de mano en cuero genuino, perfecto para ocasiones formales.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (5, 'producto5.jpg', 'Auriculares Inalámbricos', 'Auriculares bluetooth con alta calidad de sonido.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (1, 'producto6.jpg', 'Lámpara de Mesa', 'Lámpara de mesa con diseño minimalista y luz LED.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (2, 'producto7.jpg', 'Silla Ergonómica', 'Silla ergonómica para oficina, garantiza comodidad durante el trabajo.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (3, 'producto8.jpg', 'Mesa de Centro', 'Mesa de centro en madera, combina con cualquier estilo.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (4, 'producto9.jpg', 'Libro de Cocina', 'Libro con recetas tradicionales y modernas, muy completo.');
-
-INSERT INTO productos (usuarioId, imagen, nombre, descripcion)
-VALUES (5, 'producto10.jpg', 'Cartera de Mujer', 'Cartera elegante, espaciosa y moderna.');
+INSERT INTO productos (usuarioId, imagen, nombre, descripcion) VALUES 
+(1, 'rolexSub.webp', 'Rolex Submariner', 'Reloj de buceo icónico con caja de acero inoxidable y bisel giratorio unidireccional.'),
+(2, 'omega.webp', 'Omega Speedmaster', 'Cronógrafo legendario conocido como el \'Moonwatch\', usado en misiones espaciales.'),
+(3, 'tag.png', 'Tag Heuer Carrera', 'Diseño deportivo inspirado en las carreras, con cronógrafo y cristal de zafiro.'),
+(4, 'audemars.webp', 'Audemars Piguet', 'Reloj francés de lujo, clasico.'),
+(5, 'img-casio-gshock.jpg', 'Casio G-Shock', 'Reloj digital ultrarresistente con funciones múltiples y estilo urbano.'),
+(1, 'img-tissot-prx.jpg', 'Tissot PRX', 'Diseño retro con movimiento suizo y brazalete integrado.'),
+(2, 'img-citizen-ecodrive.jpg', 'Citizen Eco-Drive', 'Reloj solar que no necesita cambio de batería, con estilo clásico.'),
+(3, 'img-breitling-navitimer.jpg', 'Breitling Navitimer', 'Reloj para pilotos con regla de cálculo y diseño robusto.'),
+(4, 'img-hamilton-khaki.jpg', 'Hamilton Khaki Field', 'Estética militar con precisión suiza, ideal para uso casual.'),
+(5, 'img-dw-classic.jpg', 'Daniel Wellington Classic', 'Minimalista y elegante, perfecto para ocasiones formales.');
 
 -- Insertar comentarios
--- Producto 1
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (1, 2, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (1, 3, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (1, 4, 'Tercer comentario');
+-- Comentarios para Rolex Submariner (productoId 1)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(1, 2, 'Impresionante calidad, lo uso todos los días y sigue como nuevo.'),
+(1, 3, 'Un clásico atemporal, vale cada centavo.'),
+(1, 4, 'Lo heredé de mi padre, y todavía funciona perfecto. Increíble.');
 
--- Producto 2
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (2, 1, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (2, 4, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (2, 5, 'Tercer comentario');
+-- Omega Speedmaster (productoId 2)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(2, 1, 'Es hermoso, muy cómodo y con una historia única.'),
+(2, 4, 'Mi favorito del día a día. El cronógrafo es muy preciso.'),
+(2, 5, 'Ideal para quienes valoran la tradición y la precisión suiza.');
 
--- Producto 3
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (3, 2, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (3, 4, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (3, 5, 'Tercer comentario');
+-- Tag Heuer Carrera (3)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(3, 1, 'El diseño deportivo es lo que más me gusta. Elegante pero informal.'),
+(3, 2, 'Muy cómodo en la muñeca, y se ve increíble.');
 
--- Producto 4
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (4, 1, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (4, 3, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (4, 5, 'Tercer comentario');
+-- Seiko Prospex (4)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(4, 3, 'Lo usé para bucear en Brasil, ni una falla. Lo recomiendo fuerte.'),
+(4, 4, 'Gran relación precio-calidad. Seiko nunca decepciona.'),
+(4, 5, 'Un tanque en la muñeca. Resistente y con estilo.');
 
--- Producto 5
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (5, 1, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (5, 2, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (5, 3, 'Tercer comentario');
+-- Casio G-Shock (5)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(5, 1, 'Lo uso para entrenar y para salir. No lo cambio por nada.'),
+(5, 3, 'Muy práctico, resistente y con un diseño que llama la atención.');
 
--- Producto 6
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (6, 2, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (6, 3, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (6, 5, 'Tercer comentario');
+-- Tissot PRX (6)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(6, 2, 'Un guiño al pasado con tecnología moderna. Me encanta.'),
+(6, 4, 'El brazalete es muy cómodo y el diseño es precioso.'),
+(6, 5, 'Luce muy bien con ropa casual o elegante.');
 
--- Producto 7
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (7, 1, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (7, 3, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (7, 4, 'Tercer comentario');
+-- Citizen Eco-Drive (7)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(7, 1, 'Me encanta no tener que cambiar la batería nunca.'),
+(7, 5, 'Elegante, cómodo y ecológico. 10 puntos.');
 
--- Producto 8
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (8, 1, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (8, 4, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (8, 5, 'Tercer comentario');
+-- Breitling Navitimer (8)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(8, 2, 'Lo uso en vuelo. Precisión y estilo en uno solo.'),
+(8, 3, 'La regla de cálculo es un detalle espectacular.'),
+(8, 5, 'Robusto pero refinado. Uno de mis favoritos.');
 
--- Producto 9
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (9, 2, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (9, 3, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (9, 4, 'Tercer comentario');
+-- Hamilton Khaki Field (9)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(9, 1, 'Tiene una onda militar muy copada. Se nota la calidad.'),
+(9, 4, 'Perfecto para el día a día, sin exageraciones.'),
+(9, 5, 'Buen precio y excelente fabricación.');
 
--- Producto 10
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (10, 1, 'Primer comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (10, 2, 'Segun comentario.');
-INSERT INTO comentarios (productoId, usuarioId, texto) 
-VALUES (10, 3, 'Tercer comentario');
+-- Daniel Wellington Classic (10)
+INSERT INTO comentarios (productoId, usuarioId, texto) VALUES 
+(10, 2, 'Sencillo, pero con mucha presencia. Ideal para reuniones.'),
+(10, 3, 'Lindo diseño, combina con todo.');

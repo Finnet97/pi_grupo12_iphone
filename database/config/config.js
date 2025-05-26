@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "root",
-    "database": "mercado_liebre",
+    "database": "miralo_watch",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

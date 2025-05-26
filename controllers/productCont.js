@@ -4,29 +4,29 @@ const productCont = {
     index: function(req, res) {
         res.render('index');
     },
-    productDetail: async function (req, res) {
-        try {
-          const product = await db.Producto.findByPk(req.params.id, {
+    productDetail: function (req, res) {
+        db.Producto.findByPk(req.params.id, {
             include: [
               {
-                model: db.Usuario,
-                as: 'usuario',
-                attributes: ['email']
+                association: 'usuario',
+                attributes: ['id', 'email']
               },
               {
-                model: db.Comentario,
-                as: 'comentarios'
+                association: 'comentarios',
+                include: [{
+                  association: 'autor',
+                  attributes: ['id', 'email']
+                }]
               }
             ]
-          });
-    
+        })          
+        .then(product => {
           if (!product) return res.status(404).send('Producto no encontrado');
-    
           res.render('product', { product });
-        } catch (error) {
-          console.error('Error al cargar producto:', error);
-          res.status(500).send('Error interno del servidor');
-        }
+        })
+        .catch(error => {
+          console.error(error);
+        });
     },
     productAdd: function(req, res) {
         res.render('product-add');

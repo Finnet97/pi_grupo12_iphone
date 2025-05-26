@@ -1,4 +1,4 @@
-const data = require('../db/modulo_datos');
+const data = require('../database/modulo_datos');
 
 const productCont = {
     index: function(req, res) {

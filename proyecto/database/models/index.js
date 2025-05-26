@@ -37,21 +37,6 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-/* Definir relaciones */
-const { Usuario, Producto, Comentario } = db;
-
-// usuario - productos
-Usuario.hasMany(Producto, { foreignKey: 'usuarioId' });
-Producto.belongsTo(Usuario, { foreignKey: 'usuarioId' });
-
-// Usuario - comentarios
-Usuario.hasMany(Comentario, { foreignKey: 'usuarioId' });
-Comentario.belongsTo(Usuario, { foreignKey: 'usuarioId' });
-
-// Producto - comentarios
-Producto.hasMany(Comentario, { foreignKey: 'productoId' });
-Comentario.belongsTo(Producto, { foreignKey: 'productoId' });
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

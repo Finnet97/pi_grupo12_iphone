@@ -1,4 +1,4 @@
-const data = require('../db/modulo_datos');
+const data = require('../database/modulo_datos');
 
 const userCont = {
     login: function(req, res) {
@@ -18,15 +18,13 @@ const userCont = {
         }
         req.session.user = userInfo;
     
-    if (userInfo.recordarme != undefined) {
-        res.cookie("user", userInfo, {maxAge: 1000 * 60 * 5})
-        
+        if (userInfo.recordarme != undefined) {
+            res.cookie("user", userInfo, {maxAge: 1000 * 60 * 10})   
+        }
+    },
+    logout: function (req, res) {
+        return req.session.destroy();
     }
-        
-    }
-    
-    
 }
-
 
 module.exports = userCont;

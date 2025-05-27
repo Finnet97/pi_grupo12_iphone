@@ -34,7 +34,7 @@ const userCont = {
             res.cookie("user", userInfo, {maxAge: 1000 * 60 * 10})   
         }
     },
-    logout: function (req, res) {
+    loginDestroy: function (req, res) {
         return req.session.destroy();
     },
     profile: function (req, res) {

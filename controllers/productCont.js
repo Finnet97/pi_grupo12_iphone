@@ -21,7 +21,6 @@ const productCont = {
             ]
         })          
         .then(product => {
-          if (!product) return res.status(404).send('Producto no encontrado');
           res.render('product', { product });
         })
         .catch(error => {

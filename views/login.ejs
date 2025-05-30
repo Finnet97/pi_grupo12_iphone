@@ -16,8 +16,12 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include('partials/header') %>
-	<!-- /Header -->
+	<% if (user) { %>
+		<%- include('partials/headerLogueado') %>
+	<% } else { %>
+		<%- include('partials/header') %>
+	<% } %>	  
+	<!-- Header -->
 
 	<!-- Novedades -->
 	<div class="container products-wrapper">
@@ -31,7 +35,7 @@
             <!-- Campo usuario: tipo email -->
             <div class="form-group">
               <label class="form-label" for="usuario">Usuario (Email):</label>
-              <input class="form-input" type="email" name="usuario" id="usuario" required>
+              <input class="form-input" type="email" name="email" id="usuario" required>
             </div>
 
             <!-- Campo contraseña -->

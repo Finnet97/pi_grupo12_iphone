@@ -16,8 +16,12 @@
 </head>
 <body>
 	<!-- Header -->
-	<%- include('partials/header') %>
-	<!-- /Header -->
+	<% if (user) { %>
+		<%- include('partials/headerLogueado') %>
+	<% } else { %>
+		<%- include('partials/header') %>
+	<% } %>	  
+	<!-- Header -->
   
 	<!-- Contenido principal -->
 	<main class="container">

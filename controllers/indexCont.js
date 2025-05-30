@@ -8,8 +8,8 @@ const indexCont = {
         model: db.Usuario,
         as: 'usuario',
         attributes: [
-            'id', 
-            'email'
+          'id', 
+          'email'
         ]
       }
     })
@@ -20,7 +20,7 @@ const indexCont = {
       console.error(error);
     });
   },
-  search: function (req, res) {
+  search: function(req, res) {
     const busqueda = req.query.search;
 
     db.Producto.findAll({
@@ -35,13 +35,11 @@ const indexCont = {
       res.render('search-results', {
         productos: productos,
         busqueda: busqueda,
-        // user: req.session.user || null
+        user: req.session.user || null
       });
     })
     .catch(error => {
-      console.error("🔴 ERROR en búsqueda:", error.message);
       console.error(error);
-      res.status(500).send("Error interno del servidor");
     });
   }
 };

@@ -16,37 +16,42 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
 // middlewares
-/*
+
 app.use(session({
   secret: "trabajoIntegrador",
   resave: false,
   saveUninitialized: true
 }))
 
+// middleware de poner session en locals
 app.use(function(req, res, next) {
-  if (req.session.user != undefined) {
+
+  if (req.session.user) {
     res.locals.user = req.session.user;
+  } else {
+    res.locals.user = null;
   }
-
+  
   return next();
-})
+});
 
+// middleware de poner cookie en locals y en session
 app.use(function(req, res, next) {
+
   if (req.cookies.user != undefined && req.session.user == undefined) {
     res.locals.user = req.cookies.user;
     req.session.user = req.cookies.user;
   }
 
   return next();
-})
-*/
-
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+});
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);

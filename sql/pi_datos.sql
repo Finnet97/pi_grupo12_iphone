@@ -48,19 +48,19 @@ CREATE TABLE comentarios (
 
 -- Insertar datos de usuarios
 INSERT INTO usuarios (email, password, fechaNacimiento, dni, fotoPerfil) 
-VALUES ('juan.perez@mail.com', 'password123', '1985-04-12', 12345678, 'juan.jpg');
+VALUES ('juan.perez@mail.com', '$2b$10$mohWpFLkC9h8HqJC99uSVu3qPEifFchDEKFyBKeELmvMPe4nRwuza', '1985-04-12', 12345678, 'def_user.jpg');
 
 INSERT INTO usuarios (email, password, fechaNacimiento, dni, fotoPerfil) 
-VALUES ('totochipont@gmail.com', 'contraChipi', '2005-08-08', 94112880, 'chipo.png');
+VALUES ('totochipont@gmail.com', '$2b$10$mohWpFLkC9h8HqJC99uSVu3qPEifFchDEKFyBKeELmvMPe4nRwuza', '2005-08-08', 94112880, 'def_user.jpg');
 
 INSERT INTO usuarios (email, password, fechaNacimiento, dni, fotoPerfil)
-VALUES ('gianluca.piperno@mail.com', 'gianlu123', '1979-03-15', 34567890, 'gian.png');
+VALUES ('gianluca.piperno@mail.com', '$2b$10$mohWpFLkC9h8HqJC99uSVu3qPEifFchDEKFyBKeELmvMPe4nRwuza', '1979-03-15', 34567890, 'def_user.jpg');
 
 INSERT INTO usuarios (email, password, fechaNacimiento, dni, fotoPerfil)
-VALUES ('joacoate@mail.com', 'joacoLocooo', '1992-11-30', 45678901, 'joaco.jpg');
+VALUES ('joacoate@mail.com', '$2b$10$mohWpFLkC9h8HqJC99uSVu3qPEifFchDEKFyBKeELmvMPe4nRwuza', '1992-11-30', 45678901, 'def_user.jpg');
 
 INSERT INTO usuarios (email, password, fechaNacimiento, dni, fotoPerfil) 
-VALUES ('ana.martinez@mail.com', 'anaMartinez', '1988-09-08', 56789012, 'ana.png');
+VALUES ('ana.martinez@mail.com', '$2b$10$mohWpFLkC9h8HqJC99uSVu3qPEifFchDEKFyBKeELmvMPe4nRwuza', '1988-09-08', 56789012, 'def_user.jpg');
 
 -- Insertar publicaciones de productos
 INSERT INTO productos (usuarioId, imagen, nombre, descripcion) VALUES 

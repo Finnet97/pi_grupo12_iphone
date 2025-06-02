@@ -4,7 +4,8 @@ const productCont = {
   index: function(req, res) {
     res.render('index');
   },
-  productDetail: function (req, res) {
+
+  productDetail: function(req, res) {
     db.Producto.findByPk(req.params.id, {
       include: [
         {
@@ -20,10 +21,10 @@ const productCont = {
         }
       ]
     })          
-    .then(product => {
+    .then(function(product) {
       res.render('product', { product });
     })
-    .catch(error => {
+    .catch(function(error) {
       console.error(error);
     });
   },
@@ -33,6 +34,6 @@ const productCont = {
   productComment: function(req, res) {
     res.render('product');
   }
-}
+};
 
 module.exports = productCont;

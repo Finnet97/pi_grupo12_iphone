@@ -7,16 +7,13 @@ const indexCont = {
       include: {
         model: db.Usuario,
         as: 'usuario',
-        attributes: [
-          'id', 
-          'email'
-        ]
+        attributes: ['id', 'email']
       }
     })
-    .then(productos => {
+    .then(function(productos) {
       res.render('index', { productos });
     })
-    .catch(error => {
+    .catch(function(error) {
       console.error(error);
     });
   },
@@ -31,14 +28,14 @@ const indexCont = {
       },
       include: [{ association: "usuario" }]
     })
-    .then(productos => {
+    .then(function(productos) {
       res.render('search-results', {
         productos: productos,
         busqueda: busqueda,
         user: req.session.user || null
       });
     })
-    .catch(error => {
+    .catch(function(error) {
       console.error(error);
     });
   }

@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const userCont = {
     registerVista: function(req, res) {
         if (req.session.user != undefined) {
-            return res.redirect('/')
+            return res.redirect('/user/profile/' + req.session.user.id)
         } else {
             return res.render('register')
         }
@@ -31,12 +31,8 @@ const userCont = {
             email: req.body.email,
             password: req.body.password,
             remember: req.body.remember
-        }
-
-        if (req.session.user) {
-            return res.redirect('/user/profile/' + req.session.user.id);
-        }
-
+        };
+    
         db.Usuario.findOne({
             where: { email: userInfo.email }
         })
@@ -45,7 +41,7 @@ const userCont = {
                 return res.render('login', { error: "Email no registrado" });
             }
     
-            const contraCoincide = bcrypt.compareSync(userInfo.password, usuario.password);
+            var contraCoincide = bcrypt.compareSync(userInfo.password, usuario.password);
             if (!contraCoincide) {
                 return res.render('login', { error: "Contraseña incorrecta" });
             }
@@ -58,11 +54,11 @@ const userCont = {
     
             return res.redirect("/user/profile/" + usuario.id);
         })
-        .catch(function (error) {
+        .catch(function(error) {
             console.error(error);
         });
     },
-    loginDestroy: function (req, res) {
+    loginDestroy: function(req, res) {
         res.clearCookie('userId');
         req.session.destroy();
         res.redirect('/');
@@ -74,13 +70,13 @@ const userCont = {
             as: 'productos'
           }
         })
-        .then(usuario => {
-          res.render('profile', { usuario });
+        .then(function(usuario) {
+          res.render('profile', { usuario: usuario });
         })
-        .catch(error => {
+        .catch(function(error) {
           console.error(error);
         });
-    }
+    }      
 }
 
 module.exports = userCont;

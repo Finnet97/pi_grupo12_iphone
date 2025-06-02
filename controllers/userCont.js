@@ -18,10 +18,9 @@ const userCont = {
             fotoPerfil: req.body.fotoPerfil
         }
 
-        db.Usuario.create(userInfo);
+        db.Usuario.create(userInfo)
 
         res.redirect("/");
-        //res.redirect("/user/profile/" + userInfo.id);
     },
     loginVista: function(req, res) {
         res.render('login');
@@ -34,7 +33,9 @@ const userCont = {
         };
     
         db.Usuario.findOne({
-            where: { email: userInfo.email }
+            where: { 
+                email: userInfo.email 
+            }
         })
         .then(function(usuario) {
             if (!usuario) {
@@ -49,7 +50,7 @@ const userCont = {
             req.session.user = usuario;
     
             if (userInfo.remember) {
-                res.cookie('userId', usuario.id, { maxAge: 1000 * 60 * 5 });
+                res.cookie('userId', usuario.id, { maxAge: 1000 * 60 * 20 });
             }
     
             return res.redirect("/user/profile/" + usuario.id);

@@ -61,11 +61,19 @@
           <% } %>
         </section>
 
-        <form class="form mt-3" action="" method="POST">
-          <input class="form-input" type="text" name="comentario" placeholder="Agregar comentario">
-          <button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
-        </form>
-        <hr>
+        <% if (user) { %>
+          <form class="form mt-3" action="/product/<%= product.id %>/comment" method="POST">
+            <input class="form-input" type="text" name="comentario" placeholder="Agregar comentario">
+            <button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+          </form>
+          <hr>
+        <% } else { %>
+          <form class="form mt-3" action="/user/login" method="GET">
+            <input class="form-input" type="text" name="comentario" placeholder="Agregar comentario">
+            <button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
+          </form>
+          <hr>
+        <% } %>
       </div>
     </div>
   </div>

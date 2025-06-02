@@ -32,8 +32,24 @@ const productCont = {
     res.render('product-add');
   },
   productComment: function(req, res) {
-    res.render('product');
-  }
+    console.log("🟢 Entró a productComment");
+
+    let prodId = req.params.id;
+  
+    let commentInfo = {
+      productoId: prodId,
+      usuarioId: req.session.user.id,
+      texto: req.body.comentario
+    };
+  
+    db.Comentario.create(commentInfo)
+      .then(function() {
+        res.redirect(`/product/${prodId}`);
+      })
+      .catch(function(error) {
+        console.error(error);
+      });
+  }  
 };
 
 module.exports = productCont;

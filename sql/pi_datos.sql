@@ -68,12 +68,12 @@ INSERT INTO productos (usuarioId, imagen, nombre, descripcion) VALUES
 (2, 'omega.webp', 'Omega Speedmaster', 'Cronógrafo legendario conocido como el \'Moonwatch\', usado en misiones espaciales.'),
 (3, 'tag.png', 'Tag Heuer Carrera', 'Diseño deportivo inspirado en las carreras, con cronógrafo y cristal de zafiro.'),
 (4, 'audemars.webp', 'Audemars Piguet', 'Reloj francés de lujo, clasico.'),
-(5, 'img-casio-gshock.jpg', 'Casio G-Shock', 'Reloj digital ultrarresistente con funciones múltiples y estilo urbano.'),
-(1, 'img-tissot-prx.jpg', 'Tissot PRX', 'Diseño retro con movimiento suizo y brazalete integrado.'),
-(2, 'img-citizen-ecodrive.jpg', 'Citizen Eco-Drive', 'Reloj solar que no necesita cambio de batería, con estilo clásico.'),
-(3, 'img-breitling-navitimer.jpg', 'Breitling Navitimer', 'Reloj para pilotos con regla de cálculo y diseño robusto.'),
-(4, 'img-hamilton-khaki.jpg', 'Hamilton Khaki Field', 'Estética militar con precisión suiza, ideal para uso casual.'),
-(5, 'img-dw-classic.jpg', 'Daniel Wellington Classic', 'Minimalista y elegante, perfecto para ocasiones formales.');
+(5, 'gshock.jpg', 'Casio G-Shock', 'Reloj digital ultrarresistente con funciones múltiples y estilo urbano.'),
+(1, 'tissot.webp', 'Tissot PRX', 'Diseño retro con movimiento suizo y brazalete integrado.'),
+(2, 'citizen.webp', 'Citizen Eco-Drive', 'Reloj solar que no necesita cambio de batería, con estilo clásico.'),
+(3, 'breitling.webp', 'Breitling Navitimer', 'Reloj para pilotos con regla de cálculo y diseño robusto.'),
+(4, 'hamilton.webp', 'Hamilton Khaki Field', 'Estética militar con precisión suiza, ideal para uso casual.'),
+(5, 'danielwellington.jpg', 'Daniel Wellington Classic', 'Minimalista y elegante, perfecto para ocasiones formales.');
 
 -- Insertar comentarios
 -- Comentarios para Rolex Submariner (productoId 1)

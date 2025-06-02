@@ -7,16 +7,10 @@ const productCont = {
   productDetail: function(req, res) {
     db.Producto.findByPk(req.params.id, {
       include: [
-        {
-          association: 'usuario',
-          attributes: ['id', 'email']
-        },
+        'usuario',
         {
           association: 'comentarios',
-          include: [{
-            association: 'autor',
-            attributes: ['id', 'email']
-          }]
+          include: ['autor']
         }
       ]
     })          
@@ -29,15 +23,12 @@ const productCont = {
   },
   productAddVista: function(req, res) {
     if (req.session.user != undefined) {
-      return res.render('/product/add')
+      return res.render('product-add')
     } else {
       return res.redirect('/user/login')
     }
   },
   productAddPost: function(req, res) {
-    console.log("POST recibido:");
-    console.log(req.body);    
-
     let productInfo = {
       usuarioId: req.session.user.id,
       imagen: req.body.imagen,

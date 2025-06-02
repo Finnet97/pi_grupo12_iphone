@@ -4,11 +4,7 @@ const { Op } = require('sequelize');
 const indexCont = {
   index: function(req, res) {
     db.Producto.findAll({
-      include: {
-        model: db.Usuario,
-        as: 'usuario',
-        attributes: ['id', 'email']
-      }
+      include: ['usuario']
     })
     .then(function(productos) {
       res.render('index', { productos });
@@ -16,17 +12,17 @@ const indexCont = {
     .catch(function(error) {
       console.error(error);
     });
-  },
+  },  
   search: function(req, res) {
     const busqueda = req.query.search;
-
+  
     db.Producto.findAll({
       where: {
         nombre: {
           [Op.like]: `%${busqueda}%`
         }
       },
-      include: [{ association: "usuario" }]
+      include: ['usuario']
     })
     .then(function(productos) {
       res.render('search-results', {
@@ -38,7 +34,7 @@ const indexCont = {
     .catch(function(error) {
       console.error(error);
     });
-  }
+  }  
 };
 
 module.exports = indexCont;

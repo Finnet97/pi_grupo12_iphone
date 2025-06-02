@@ -66,10 +66,7 @@ const userCont = {
     },
     profile: function(req, res) {
         db.Usuario.findByPk(req.params.id, {
-          include: {
-            model: db.Producto,
-            as: 'productos'
-          }
+          include: ['productos']
         })
         .then(function(usuario) {
           res.render('profile', { usuario: usuario });
